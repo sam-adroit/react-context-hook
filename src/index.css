@@ -1,13 +1,76 @@
-body {
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(90, 2, 90);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  width: max(40%, 350px);
+  margin: 5em auto;
+}
+
+.navbar {
+  background: rgb(211, 107, 211);
+  text-align: center;
+  color: antiquewhite;
+  padding: 1.5em 0;
+}
+
+.navbar h1 {
+  padding-bottom: 0.7em;
+}
+
+.book-list {
+  background: rgb(0 0 0/0.3);
+  color: antiquewhite;
+}
+
+.books {
+  list-style: none;
+  padding: 1em;
+}
+
+.book-details {
+  font-size: 1.2rem;
+  background: rgb(211, 107, 211);
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 5px;
+}
+
+.book-details:not(:nth-child(1)) {
+  padding-top: 0.6em;
+}
+
+.book-details:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.book-form {
+  background: rgb(211, 107, 211);
+  padding: 1em;
+}
+
+.book-form input {
+  display: block;
+  width: calc(100% - 1em);
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.book-form button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.7em 1em;
 }
